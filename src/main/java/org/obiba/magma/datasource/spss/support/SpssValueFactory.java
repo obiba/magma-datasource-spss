@@ -7,7 +7,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.obiba.datasource.opal.spss.support;
+package org.obiba.magma.datasource.spss.support;
 
 import com.google.common.collect.Lists;
 import org.obiba.magma.MagmaRuntimeException;
@@ -17,8 +17,6 @@ import org.obiba.magma.type.TextType;
 import org.opendatafoundation.data.spss.SPSSVariable;
 
 import java.util.List;
-
-import static org.obiba.datasource.opal.spss.support.CharacterSetValidator.validate;
 
 public abstract class SpssValueFactory {
 
@@ -57,7 +55,7 @@ public abstract class SpssValueFactory {
     String value = getValue(index);
     if (withValidation) {
       try {
-        validate(value);
+        CharacterSetValidator.validate(value);
       } catch(SpssInvalidCharacterException e) {
         String variableName = spssVariable.getName();
         throw new SpssDatasourceParsingException("Invalid characters in variable value.", "InvalidCharsetCharacter",

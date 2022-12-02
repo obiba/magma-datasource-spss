@@ -8,10 +8,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.obiba.datasource.opal.spss.support;
+package org.obiba.magma.datasource.spss.support;
 
 import com.google.common.base.Strings;
-import org.obiba.datasource.opal.spss.SpssDatasource;
+import org.obiba.magma.datasource.spss.SpssDatasource;
 import org.obiba.magma.AbstractDatasourceFactory;
 import org.obiba.magma.Datasource;
 
