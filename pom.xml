@@ -195,6 +195,17 @@
     </repository>
   </repositories>
 
+  <distributionManagement>
+    <repository>
+      <id>obiba-release-local</id>
+      <url>https://obiba.jfrog.io/obiba/libs-release-local</url>
+    </repository>
+    <snapshotRepository>
+      <id>obiba-snapshot-local</id>
+      <url>https://obiba.jfrog.io/obiba/libs-snapshot-local</url>
+    </snapshotRepository>
+  </distributionManagement>
+
   <scm>
     <connection>scm:git:https://github.com/obiba/magma-datasource-spss.git</connection>
     <developerConnection>scm:git:https://github.com/obiba/magma-datasource-spss.git</developerConnection>
