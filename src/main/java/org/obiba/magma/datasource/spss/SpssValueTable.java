@@ -7,14 +7,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.obiba.datasource.opal.spss;
+package org.obiba.magma.datasource.spss;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
-import org.obiba.datasource.opal.spss.support.SpssDatasourceParsingException;
-import org.obiba.datasource.opal.spss.support.SpssVariableTypeMapper;
-import org.obiba.datasource.opal.spss.support.SpssVariableValueFactory;
-import org.obiba.datasource.opal.spss.support.SpssVariableValueSourceFactory;
+import org.obiba.magma.datasource.spss.support.SpssDatasourceParsingException;
+import org.obiba.magma.datasource.spss.support.SpssVariableTypeMapper;
+import org.obiba.magma.datasource.spss.support.SpssVariableValueFactory;
+import org.obiba.magma.datasource.spss.support.SpssVariableValueSourceFactory;
 import org.obiba.magma.*;
 import org.obiba.magma.support.AbstractValueTable;
 import org.obiba.magma.support.DatasourceParsingException;

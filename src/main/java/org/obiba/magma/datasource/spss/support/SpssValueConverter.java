@@ -8,7 +8,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.obiba.datasource.opal.spss.support;
+package org.obiba.magma.datasource.spss.support;
 
 public interface SpssValueConverter {
   String convert(String value) throws SpssValueConversionException;

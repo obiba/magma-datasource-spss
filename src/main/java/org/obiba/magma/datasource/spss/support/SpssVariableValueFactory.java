@@ -7,14 +7,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.obiba.datasource.opal.spss.support;
+package org.obiba.magma.datasource.spss.support;
 
 import org.obiba.magma.ValueType;
-import org.obiba.magma.type.DecimalType;
-import org.obiba.magma.type.IntegerType;
-import org.opendatafoundation.data.FileFormatInfo;
 import org.opendatafoundation.data.spss.SPSSFileException;
-import org.opendatafoundation.data.spss.SPSSNumericVariable;
 import org.opendatafoundation.data.spss.SPSSVariable;
 
 import java.util.List;

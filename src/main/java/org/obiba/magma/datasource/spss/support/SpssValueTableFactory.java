@@ -7,10 +7,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.obiba.datasource.opal.spss.support;
+package org.obiba.magma.datasource.spss.support;
 
 import com.google.common.base.Strings;
-import org.obiba.datasource.opal.spss.SpssValueTable;
+import org.obiba.magma.datasource.spss.SpssValueTable;
 import org.obiba.magma.Datasource;
 import org.obiba.magma.support.DatasourceParsingException;
 import org.opendatafoundation.data.spss.SPSSFile;

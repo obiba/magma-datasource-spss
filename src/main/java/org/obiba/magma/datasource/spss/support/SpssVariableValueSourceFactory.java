@@ -7,11 +7,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.obiba.datasource.opal.spss.support;
+package org.obiba.magma.datasource.spss.support;
 
 import com.google.common.base.Strings;
 import com.google.common.collect.Sets;
-import org.obiba.datasource.opal.spss.SpssVariableValueSource;
+import org.obiba.magma.datasource.spss.SpssVariableValueSource;
 import org.obiba.magma.Attribute;
 import org.obiba.magma.Category;
 import org.obiba.magma.ValueType;
@@ -32,8 +32,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
-
-import static org.obiba.datasource.opal.spss.support.CharacterSetValidator.validate;
 
 public class SpssVariableValueSourceFactory implements VariableValueSourceFactory {
 
@@ -103,9 +101,9 @@ public class SpssVariableValueSourceFactory implements VariableValueSourceFactor
     if(variable.categoryMap != null) {
       for(String category : variable.categoryMap.keySet()) {
         SPSSVariableCategory spssCategory = variable.categoryMap.get(category);
-        validate(category);
+        CharacterSetValidator.validate(category);
         String catName = variable instanceof SPSSNumericVariable ? CharacterSetValidator.normalizeNumberString(category) : category;
-        validate(spssCategory.label);
+        CharacterSetValidator.validate(spssCategory.label);
         builder.addCategory(Category.Builder.newCategory(catName)
             .addAttribute(addLabelAttribute(spssCategory.label))
             .missing(isCategoryValueMissingCode(variable, spssCategory)).build());
@@ -125,7 +123,7 @@ public class SpssVariableValueSourceFactory implements VariableValueSourceFactor
   private Variable createVariableBuilder(int variableIndex, @NotNull SPSSVariable spssVariable)
       throws SpssInvalidCharacterException {
     String variableName = spssVariable.getName();
-    validate(variableName);
+    CharacterSetValidator.validate(variableName);
     Variable.Builder builder = Variable.Builder.newVariable(variableName, TextType.get(), entityType);
     builder.index(variableIndex);
     addAttributes(builder, spssVariable);
@@ -169,7 +167,7 @@ public class SpssVariableValueSourceFactory implements VariableValueSourceFactor
   }
 
   private Attribute createAttribute(String attributeName, @Nullable String value) throws SpssInvalidCharacterException {
-    validate(value);
+    CharacterSetValidator.validate(value);
     return Attribute.Builder.newAttribute(attributeName).withNamespace("spss").withValue(value).build();
   }
 
