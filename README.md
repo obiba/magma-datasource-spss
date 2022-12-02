@@ -1,9 +1,9 @@
-# Opal SPSS Plugin [![Build Status](https://travis-ci.org/obiba/opal-datasource-spss.svg?branch=master)](https://travis-ci.org/obiba/opal-datasource-spss)
+# Magma SPSS Datasource [![Build Status](https://app.travis-ci.com/obiba/magma-datasource-spss.svg?branch=master)](https://app.travis-ci.com/obiba/magma-datasource-spss)
 
-[Opal](https://github.com/obiba/opal) is OBiBa’s core database application for biobanks or epidemiological studies.
+[Magma](https://github.com/obiba/magma) is OBiBa’s data and meta-data abstraction layer.
 
-* Have a bug or a question? Please create an issue on [GitHub](https://github.com/obiba/opal-datasource-spss/issues).
-* Continuous integration is on [Travis](https://travis-ci.org/obiba/opal-datasource-spss).
+* Have a bug or a question? Please create an issue on [GitHub](https://github.com/obiba/magma-datasource-spss/issues).
+* Continuous integration is on [Travis](https://travis-ci.org/obiba/magma-datasource-spss).
 
 ## Mailing list
 
@@ -15,7 +15,7 @@ obiba-users@googlegroups.com
 
 ## License
 
-OBiBa software are open source and made available under the [GPL3 licence](http://www.obiba.org/pages/license/). OBiBa software are free of charge.
+OBiBa software are open source and made available under the [GPL3 licence](https://www.obiba.org/pages/license/). OBiBa software are free of charge.
 
 # OBiBa acknowledgments
 
@@ -23,4 +23,4 @@ If you are using OBiBa software, please cite our work in your code, websites, pu
 
 "The work presented herein was made possible using the OBiBa suite (www.obiba.org), a  software suite developed by Maelstrom Research (www.maelstrom-research.org)"
 
-Implementation of an Opal SPSS datasource plugin
+Implementation of an Magma SPSS datasource

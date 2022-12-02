@@ -43,6 +43,11 @@ public class SpssVariableValueSource extends AbstractVariableValueSource impleme
     return variable.getValueType();
   }
 
+  @Override
+  public Iterable<Value> getValues(final Iterable<VariableEntity> entities) {
+    return () -> new ValuesIterator(entities);
+  }
+
   @NotNull
   @Override
   public Value getValue(ValueSet valueSet) {
@@ -61,11 +66,6 @@ public class SpssVariableValueSource extends AbstractVariableValueSource impleme
     return this;
   }
 
-  @Override
-  public Iterable<Value> getValues(final List<VariableEntity> entities) {
-    return () -> new ValuesIterator(entities);
-  }
-
   //
   // Inner classes
   //
@@ -74,7 +74,7 @@ public class SpssVariableValueSource extends AbstractVariableValueSource impleme
 
     private final Iterator<VariableEntity> entitiesIterator;
 
-    private ValuesIterator(Collection<VariableEntity> entities) {
+    private ValuesIterator(Iterable<VariableEntity> entities) {
       entitiesIterator = entities.iterator();
     }
 
