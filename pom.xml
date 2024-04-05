@@ -8,12 +8,13 @@
   <url>https://www.obiba.org</url>
 
   <properties>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.release>21</maven.compiler.release>
+    <maven.compiler.target>21</maven.compiler.target>
+    <maven.compiler.source>21</maven.compiler.source>
 
     <fest.version>2.0M10</fest.version>
     <junit.version>4.13.1</junit.version>
-    <magma.version>4.0.1</magma.version>
+    <magma.version>5.0-SNAPSHOT</magma.version>
     <obiba-commons.version>3.0.2</obiba-commons.version>
     <spssreader.version>1.2.2</spssreader.version>
 
