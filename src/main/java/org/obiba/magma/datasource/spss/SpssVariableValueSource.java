@@ -51,7 +51,11 @@ public class SpssVariableValueSource extends AbstractVariableValueSource impleme
   @NotNull
   @Override
   public Value getValue(ValueSet valueSet) {
-    SpssValueSet spssValueSet = (SpssValueSet) valueSet;
+    ValueSet vs = valueSet;
+    if (valueSet instanceof ValueSetWrapper) {
+      vs = ((ValueSetWrapper) valueSet).getWrapped();
+    }
+    SpssValueSet spssValueSet = (SpssValueSet) vs;
     return spssValueSet.getValue(variable);
   }
 
